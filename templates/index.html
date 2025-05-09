@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predicción Titanic</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>Predicción de Supervivencia en el Titanic</h2>
+    <form method="POST" action="/predict">
+        <label>Clase (1, 2, 3):</label><br>
+        <input type="number" name="pclass" required><br>
+        
+        <label>Sexo (0=femenino, 1=masculino):</label><br>
+        <input type="number" name="sex" required><br>
+        
+        <label>Edad:</label><br>
+        <input type="number" step="any" name="age" required><br>
+        
+        <label>Tarifa:</label><br>
+        <input type="number" step="any" name="fare" required><br><br>
+        
+        <input type="submit" value="Predecir">
+    </form>
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
